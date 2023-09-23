@@ -1,0 +1,13 @@
+<div class="container">
+    <h1 class="mb-5">{{this.category && this.category !== '' ? 'Top news for ' + this.category : 'Headlines'}}</h1>
+    <div class="row">
+        <div class="card col my-4 mx-2" style="min-width: 18rem;" *ngFor="let news of newsData">
+            <img src="{{news.urlToImage}}" class="card-img-top" alt="news">
+            <div class="card-body">
+                <h5 class="card-title">{{news.title}}</h5>
+                <p class="card-text">by: {{news.source.name}}</p>
+                <a href="{{news.url}}">View article</a>
+            </div>
+        </div>
+    </div>
+</div>
