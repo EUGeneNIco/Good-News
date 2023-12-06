@@ -1,0 +1,9 @@
+.card{
+    min-width: 18rem; 
+    border-radius: 1rem;
+    max-height: 35rem;
+}
+
+.card-text{
+    font-style: italic;
+}

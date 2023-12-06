@@ -1,3 +1,4 @@
 .with-cursor a{
     cursor: pointer;
+    caret-color: transparent;
 }

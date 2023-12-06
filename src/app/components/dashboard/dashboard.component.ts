@@ -40,9 +40,21 @@ export class DashboardComponent implements OnInit {
   searchNewsByCategory(category: string){
     this.newsService.getNewsByCategory(category).subscribe({
       next: (news: any) => {
-        // console.log("News: ", news);
+        // console.log(news);
+
         this.newsData = news.articles.filter(news => {
           return news.urlToImage != null;
+        }).map((newsData: any) => {
+          return {
+            title: newsData.title.split(' - ')[0],
+            source: newsData.source,
+            author: newsData.author,
+            content: newsData.content,
+            description: newsData.description,
+            publishedAt: newsData.publishedAt,
+            url: newsData.url,
+            urlToImage: newsData.urlToImage,
+          }
         });
       },
       error: (err) => {

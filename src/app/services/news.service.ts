@@ -15,11 +15,11 @@ export class NewsService extends BaseService {
   }
 
   getNewsByCategory(cat: string){
+    let withCategory = '?';
     if(cat !== ''){
-      return this.http.get(this.API_URL + `top-headlines?category=${cat}&country=us&sortBy=popularity&apiKey=` + this.API_KEY);
+      withCategory = `?category=${cat}&`;
     }
-    else{
-      return this.http.get(this.API_URL + 'top-headlines?country=us&sortBy=popularity&apiKey=' + this.API_KEY);
-    }
+
+    return this.http.get(this.API_URL + `top-headlines${withCategory}country=us&sortBy=popularity&apiKey=` + this.API_KEY);
   }
 }
