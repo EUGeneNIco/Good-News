@@ -1,7 +1,12 @@
 .card{
-    min-width: 18rem; 
+    width: 19rem; 
     border-radius: 1rem;
     max-height: 35rem;
+}
+
+.card-grid{
+    grid-gap: 0.8rem; 
+    width: 100%;
 }
 
 .card-text{
