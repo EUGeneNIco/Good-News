@@ -10,7 +10,14 @@ export class CategoryService {
 
   categorySelected$ = this.categorySelectedSource.asObservable();
 
+  private searchItem = new Subject<string>();
+  searchItem$ = this.searchItem.asObservable();
+
   selectCategory(category: string){
     this.categorySelectedSource.next(category);
+  }
+
+  search(search: string){
+    this.searchItem.next(search);
   }
 }

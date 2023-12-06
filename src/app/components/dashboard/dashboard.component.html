@@ -1,16 +1,25 @@
 <div class="container">
-    <h1 class="mb-5">{{this.category && this.category !== '' ? 'Top news for ' + this.category : 'Headlines'}}</h1>
-    <div class="row card-grid">
-        <div class="card col-3 my-4 p-2" *ngFor="let news of newsData">
-            <img src="{{news.urlToImage}}" class="card-img-top" alt="news">
-            <div class="card-body">
-                <h5 class="card-title">{{
-                    news.title.length > 85 ?
-                    (news.title| slice:0:80) + '...' : 
-                    news.title
-                }}</h5>
-                <p class="card-text">by: {{news.source.name}}</p>
-                <a href="{{news.url}}">View article</a>
+    <h1 class="mb-5">{{this.category && this.category !== ''
+        ? 'Top news for ' + this.category
+        : this.searchItem && this.searchItem !== '' 
+            ? 'Search results for ' + this.searchItem 
+            : 'Headlines'
+    }}</h1>
+    <div class="row g-2">
+        <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let news of newsData">
+            <div class="card my-2 p-2 card-effect">
+                <img style="max-height: 45%;" src="{{news.urlToImage}}" class="card-img-top" alt="news">
+                <div class="card-body">
+                    <h5 class="card-title">{{
+                        news.title.length > 85 ?
+                        (news.title| slice:0:80) + '...' :
+                        news.title
+                        }}</h5>
+                    <p class="card-text">by: {{news.author ? news.author + ',' : ''}} {{news.source.name}}</p>
+                </div>
+                <div class="card-body" style="display: flex; justify-content: end; align-items: flex-end;">
+                    <a style="font-style: italic;" target="_blank" href="{{news.url}}">Read article</a>
+                </div>
             </div>
         </div>
     </div>
