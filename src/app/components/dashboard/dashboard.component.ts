@@ -10,6 +10,7 @@ import { NewsService } from 'src/app/services/news.service';
 })
 export class DashboardComponent implements OnInit {
   newsData: any[] = [];
+  newsHeadline: any;
   unsubscribe$ = new Subject<void>();
   category: string;
   searchItem: string;
@@ -48,12 +49,18 @@ export class DashboardComponent implements OnInit {
 
   searchNewsByCategory(category: string) {
     this.resetNewsDashboard();
+    this.searchItem = '';
 
     this.newsService.getNewsByCategory(category).subscribe({
       next: (news: any) => {
-        // console.log(news);
-
-        this.newsData = this.prepareData(news.articles);
+        
+        // this.newsData = this.prepareData(news.articles);
+        
+        let newsItems = this.prepareData(news.articles);
+        this.newsHeadline = newsItems[0];
+        this.newsData = newsItems.splice(1);
+        
+        // console.log(this.newsHeadline);
       },
       error: (err) => {
         console.log("Error: ", err);
@@ -63,6 +70,7 @@ export class DashboardComponent implements OnInit {
 
   searchNews() {
     this.resetNewsDashboard();
+    this.category = '';
     
     this.newsService.searchNews(this.searchItem).subscribe({
       next: (news: any) => {
@@ -82,9 +90,10 @@ export class DashboardComponent implements OnInit {
     }).map((newsData: any) => {
       return {
         title: newsData.title.split(' - ')[0],
+        content: newsData.content ? newsData.content.split(' [+')[0] : '',
         source: newsData.source,
         author: newsData.author,
-        content: newsData.content,
+        // content: newsData.content,
         description: newsData.description,
         publishedAt: newsData.publishedAt,
         url: newsData.url,
@@ -95,5 +104,6 @@ export class DashboardComponent implements OnInit {
 
   resetNewsDashboard() {
     this.newsData = [];
+    this.newsHeadline = '';
   }
 }
