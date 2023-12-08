@@ -13,7 +13,9 @@ export class DashboardComponent implements OnInit {
   newsHeadline: any;
   unsubscribe$ = new Subject<void>();
   category: string;
+  hasCategory: boolean = false;
   searchItem: string;
+  hasSearchItem: boolean = false;
 
   constructor(
     private newsService: NewsService,
@@ -24,6 +26,7 @@ export class DashboardComponent implements OnInit {
       .subscribe(cat => {
         // console.log('Category selected ', cat);
         this.category = cat;
+        this.hasCategory = true;
         this.searchNewsByCategory(cat);
       });
 
@@ -32,6 +35,7 @@ export class DashboardComponent implements OnInit {
       .subscribe(searchItem => {
         // console.log(searchItem)
         this.searchItem = searchItem;
+        this.hasSearchItem = true;
         this.searchNews();
       });
 
@@ -50,6 +54,7 @@ export class DashboardComponent implements OnInit {
   searchNewsByCategory(category: string) {
     this.resetNewsDashboard();
     this.searchItem = '';
+    this.hasSearchItem = false;
 
     this.newsService.getNewsByCategory(category).subscribe({
       next: (news: any) => {
@@ -71,6 +76,7 @@ export class DashboardComponent implements OnInit {
   searchNews() {
     this.resetNewsDashboard();
     this.category = '';
+    this.hasCategory = false;
     
     this.newsService.searchNews(this.searchItem).subscribe({
       next: (news: any) => {

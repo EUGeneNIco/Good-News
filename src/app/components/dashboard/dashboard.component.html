@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container pt-3">
     <h1 class="mb-5">{{this.category && this.category !== ''
         ? 'Top News for ' +  this.category[0].toUpperCase() + this.category.slice(1)
-        : (this.searchItem && this.searchItem !== ''
+        : (this.hasSearchItem
             ? 'Top News for ' + this.searchItem[0].toUpperCase() + this.searchItem.slice(1)
             : 'Headlines'
         )

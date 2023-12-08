@@ -2,3 +2,30 @@
     cursor: pointer;
     caret-color: transparent;
 }
+
+.navbar{
+    background-color: whitesmoke;
+}
+
+
+.navbar-nav a{
+    font-family: "Vollkorn", serif;
+    font-weight:800;
+    font-size
+    : large;
+}
+
+.navbar-nav a:hover{
+    text-decoration: underline;
+}
+
+
+.navbar-nav {
+    padding-left: auto;
+}
+
+.navbar-brand{
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-size: xx-large;
+    font-weight: 900;
+}
