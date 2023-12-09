@@ -99,13 +99,17 @@ export class DashboardComponent implements OnInit {
         content: newsData.content ? newsData.content.split(' [+')[0] : '',
         source: newsData.source,
         author: newsData.author,
-        // content: newsData.content,
         description: newsData.description,
         publishedAt: newsData.publishedAt,
         url: newsData.url,
         urlToImage: newsData.urlToImage,
       }
     });
+  }
+
+  shortenString(inputString: string, maxNoOfChars: number, decreaseBy: number){
+    return inputString.length > maxNoOfChars ?
+      inputString.slice(0, maxNoOfChars - decreaseBy) + '...' : inputString;
   }
 
   resetNewsDashboard() {

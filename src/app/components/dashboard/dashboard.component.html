@@ -1,9 +1,9 @@
 <div class="container pt-3">
     <h1 class="mb-5">{{this.category && this.category !== ''
-        ? 'Top News for ' +  this.category[0].toUpperCase() + this.category.slice(1)
+        ? 'Top News for ' + this.category[0].toUpperCase() + this.category.slice(1)
         : (this.hasSearchItem
-            ? 'Top News for ' + this.searchItem[0].toUpperCase() + this.searchItem.slice(1)
-            : 'Headlines'
+        ? 'Top News for ' + this.searchItem[0].toUpperCase() + this.searchItem.slice(1)
+        : 'Headlines'
         )
         }}</h1>
     <div class="row g-2" *ngIf="newsHeadline">
@@ -17,14 +17,11 @@
                     <p class="card-text author">by: {{newsHeadline.author ? newsHeadline.author + ',' : ''}}
                         {{newsHeadline.source.name}}</p>
                     <p class="card-text">{{
-                        newsHeadline.content.length > 1000 ?
-                        (newsHeadline.content| slice:0:995) + '...' :
-                        newsHeadline.content
+                        shortenString(newsHeadline.content, 1000, 5)
                         }}</p>
-                    <a style="font-style: italic; float: right;" target="_blank" href="{{newsHeadline.url}}">Read article</a>
+                    <a style="font-style: italic; float: right;" target="_blank" href="{{newsHeadline.url}}">Read
+                        article</a>
                 </div>
-                <!-- <div class="card-body" style="display: flex; justify-content: end; align-items: flex-end;">
-                </div> -->
             </div>
         </div>
     </div>
@@ -34,9 +31,7 @@
                 <img style="max-height: 45%;" src="{{news.urlToImage}}" class="card-img-top" alt="news">
                 <div class="card-body">
                     <h5 class="card-title">{{
-                        news.title.length > 85 ?
-                        (news.title| slice:0:80) + '...' :
-                        news.title
+                        shortenString(news.title, 85, 5)
                         }}</h5>
                     <p class="card-text author">by: {{news.author ? news.author + ',' : ''}} {{news.source.name}}</p>
                 </div>

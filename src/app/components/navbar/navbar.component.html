@@ -1,7 +1,6 @@
 <nav class="navbar navbar-expand-lg fixed-top navbar-light py-3" aria-label="Main navigation">
   <div class="container-fluid">
     <a class="navbar-brand" href="">Good News</a>
-    <!-- <img class="logo" src="assets/images/logo-dark.svg" alt=""> -->
     <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" data-bs-toggle="collapse"
       data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -9,26 +8,12 @@
 
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 with-cursor">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" (click)="onSelectCategory('')">Headlines</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" (click)="onSelectCategory('sports')">Sports</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" (click)="onSelectCategory('technology')">Technology</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" (click)="onSelectCategory('business')">Business</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" (click)="onSelectCategory('entertainment')">Entertainment</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" (click)="onSelectCategory('health')">Health</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" (click)="onSelectCategory('science')">Science</a>
+        <li class="nav-item" *ngFor="let category of categories">
+          <a class="nav-link" aria-current="page" 
+            [ngClass]="this.selectedCategory === category.value ? 'selected' : 'not-selected'"
+            (click)="onSelectCategory(category.value)">{{
+              category.name
+            }}</a>
         </li>
         <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Settings</a>
@@ -41,10 +26,9 @@
       </ul>
       <form [formGroup]="formModel" class="d-flex" role="search" autocomplete="off">
         <div class="input-group">
-          <input type="text" formControlName="searchItem" class="form-control" placeholder="Input a keyword here"
+          <input type="text" style="border: 0;" formControlName="searchItem" class="form-control" placeholder="Input a keyword here"
             aria-label="Search" aria-describedby="Search">
-          <!-- <button class="btn btn-outline-success" type="button" id="Search"(click)="search()">Search</button> -->
-          <span (click)="search()" style="cursor: pointer;" class="input-group-text"><i class='bx bx-search-alt-2'
+          <span (click)="search()" style="cursor: pointer; background-color: black; color: white;" class="input-group-text"><i class='bx bx-search-alt-2'
               id="Search"></i></span>
         </div>
       </form>

@@ -4,15 +4,14 @@
 }
 
 .navbar{
-    background-color: whitesmoke;
+    background-color: var(--white);
 }
 
 
 .navbar-nav a{
     font-family: "Vollkorn", serif;
     font-weight:800;
-    font-size
-    : large;
+    font-size: large;
 }
 
 .navbar-nav a:hover{
@@ -28,4 +27,13 @@
     font-family: 'Montserrat Subrayada', sans-serif;
     font-size: xx-large;
     font-weight: 900;
+}
+
+.selected {
+    text-decoration:underline;
+    color: black !important;
+}
+
+.not-selected {
+    text-decoration: none;
 }

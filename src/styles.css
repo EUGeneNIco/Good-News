@@ -5,3 +5,9 @@
 * {
   font-family: "Lato", sans-serif;
 }
+
+:root {
+  --white:whitesmoke;
+  --dark: #000000;
+  --secondary:#0f0e0e;
+}

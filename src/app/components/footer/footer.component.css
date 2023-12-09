@@ -1,0 +1,25 @@
+
+.footer-bottom {
+    background-color: var(--white);
+}
+
+.footer-top {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    color: var(--dark);
+}
+
+.footer-top a {
+    color: var(--dark);
+}
+
+.footer-top a:hover {
+    background-color: var(--white);
+}
+
+
+.footer-top .brand{
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-size: xx-large;
+    font-weight: 900;
+}
