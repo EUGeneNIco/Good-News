@@ -6,6 +6,13 @@
         : 'Headlines'
         )
         }}</h1>
+    <div class="row g-2" *ngIf="!pageIsReady">
+        <div class="col-12">
+            <div class="headline-card mb-5 p-3">
+                
+            </div>
+        </div>
+    </div>
     <div class="row g-2" *ngIf="newsHeadline">
         <div class="col-12">
             <div class="headline-card mb-5 p-3 d-md-flex">
@@ -17,7 +24,7 @@
                     <p class="card-text author">by: {{newsHeadline.author ? newsHeadline.author + ',' : ''}}
                         {{newsHeadline.source.name}}</p>
                     <p class="card-text">{{
-                        shortenString(newsHeadline.content, 1000, 5)
+                        shortenString(newsHeadline.description, 1000, 5)
                         }}</p>
                     <a style="font-style: italic; float: right;" target="_blank" href="{{newsHeadline.url}}">Read
                         article</a>
@@ -25,17 +32,19 @@
             </div>
         </div>
     </div>
-    <div class="row g-2">
+    <div class="row g-2" *ngIf="newsData">
         <div class="col-lg-3 col-md-6" *ngFor="let news of newsData">
-            <div class="card my-2 p-2 card-effect mx-auto">
+            <div class="card mb-2 p-2 card-effect mx-auto">
                 <img style="max-height: 45%;" src="{{news.urlToImage}}" class="card-img-top" alt="news">
                 <div class="card-body">
                     <h5 class="card-title">{{
                         shortenString(news.title, 85, 5)
                         }}</h5>
-                    <p class="card-text author">by: {{news.author ? news.author + ',' : ''}} {{news.source.name}}</p>
+                    <p class="card-text author">by: {{
+                    news.author ? shortenString(news.author, 60, 5) + ',' : ''
+                    }} {{news.source.name}}</p>
                 </div>
-                <div class="card-body" style="display: flex; justify-content: end; align-items: flex-end;">
+                <div class="card-text" style="display: flex; justify-content: end; align-items: flex-end;">
                     <a style="font-style: italic;" target="_blank" href="{{news.url}}">Read article</a>
                 </div>
             </div>

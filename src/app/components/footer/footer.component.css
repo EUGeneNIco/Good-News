@@ -4,9 +4,9 @@
 }
 
 .footer-top {
-    padding-top: 90px;
-    padding-bottom: 90px;
-    color: var(--dark);
+    background-color: var(--white);
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .footer-top a {

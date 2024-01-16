@@ -12,10 +12,14 @@ export class DashboardComponent implements OnInit {
   newsData: any[] = [];
   newsHeadline: any;
   unsubscribe$ = new Subject<void>();
-  category: string;
+  category: string = '';
   hasCategory: boolean = false;
   searchItem: string;
   hasSearchItem: boolean = false;
+
+  get pageIsReady() {
+    return this.newsHeadline && this.newsData;
+  }
 
   constructor(
     private newsService: NewsService,
@@ -50,21 +54,18 @@ export class DashboardComponent implements OnInit {
     this.unsubscribe$.complete();
   }
 
-
   searchNewsByCategory(category: string) {
-    this.resetNewsDashboard();
-    this.searchItem = '';
-    this.hasSearchItem = false;
+    this.initializeDashboard();
+    this.initSearchVariables();
 
     this.newsService.getNewsByCategory(category).subscribe({
       next: (news: any) => {
-        
-        // this.newsData = this.prepareData(news.articles);
-        
+        console.log(news);
         let newsItems = this.prepareData(news.articles);
+        console.log(newsItems);
         this.newsHeadline = newsItems[0];
         this.newsData = newsItems.splice(1);
-        
+
         // console.log(this.newsHeadline);
       },
       error: (err) => {
@@ -74,10 +75,9 @@ export class DashboardComponent implements OnInit {
   }
 
   searchNews() {
-    this.resetNewsDashboard();
-    this.category = '';
-    this.hasCategory = false;
-    
+    this.initializeDashboard();
+    this.initCategoryVariables();
+
     this.newsService.searchNews(this.searchItem).subscribe({
       next: (news: any) => {
         // console.log("news by search: ", news, this.searchItem);
@@ -107,13 +107,23 @@ export class DashboardComponent implements OnInit {
     });
   }
 
-  shortenString(inputString: string, maxNoOfChars: number, decreaseBy: number){
+  shortenString(inputString: string, maxNoOfChars: number, decreaseBy: number) {
     return inputString.length > maxNoOfChars ?
       inputString.slice(0, maxNoOfChars - decreaseBy) + '...' : inputString;
   }
 
-  resetNewsDashboard() {
+  private initializeDashboard() {
     this.newsData = [];
     this.newsHeadline = '';
+  }
+
+  private initCategoryVariables() {
+    this.category = '';
+    this.hasCategory = false;
+  }
+
+  private initSearchVariables() {
+    this.searchItem = '';
+    this.hasSearchItem = false;
   }
 }
