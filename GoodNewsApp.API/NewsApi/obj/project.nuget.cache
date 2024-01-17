@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "8vo8UBszQpiZNkLQFKWNCAqEdKnfYRq3fuhgFyHQIuQ6n1KAb4ZOQy68lPGTF2eWspQQE+4FBGFEfA9lXEYANQ==",
+  "success": true,
+  "projectFilePath": "D:\\Importants\\Programming 101\\Web Personal Projects\\NewsApp\\GoodNewsApp\\GoodNewsApp.API\\NewsApi\\NewsApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\eunic\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
