@@ -54,4 +54,13 @@ GoodNewsApp.API/NewsApi/obj/
 
 *.cache
 *.dll
-*.pdb
+GoodNewsApp.API/.vs/ProjectEvaluation/goodnewsapp.api.metadata.v2
+GoodNewsApp.API/.vs/ProjectEvaluation/goodnewsapp.api.projects.v2
+GoodNewsApp.API/.vs/GoodNewsApp.API/v17/.suo
+GoodNewsApp.API/.vs/GoodNewsApp.API/DesignTimeBuild/.dtbcache.v2
+GoodNewsApp.API/NewsApi/bin/Debug/net6.0/NewsApi.dll
+GoodNewsApp.API/NewsApi/bin/Debug/net6.0/NewsApi.pdb
+GoodNewsApp.API/NewsApi/obj/Debug/net6.0/NewsApi.dll
+GoodNewsApp.API/NewsApi/obj/Debug/net6.0/NewsApi.pdb
+GoodNewsApp.API/NewsApi/obj/Debug/net6.0/ref/NewsApi.dll
+GoodNewsApp.API/NewsApi/obj/Debug/net6.0/refint/NewsApi.dll
