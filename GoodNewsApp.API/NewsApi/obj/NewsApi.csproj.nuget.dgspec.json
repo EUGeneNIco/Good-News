@@ -4,6 +4,211 @@
     "D:\\Importants\\Programming 101\\Web Personal Projects\\NewsApp\\GoodNewsApp\\GoodNewsApp.API\\NewsApi\\NewsApi.csproj": {}
   },
   "projects": {
+    "D:\\Importants\\Programming 101\\Web Personal Projects\\NewsApp\\GoodNewsApp\\GoodNewsApp.API\\GoodNewsApp.API\\GoodNewsApp.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Importants\\Programming 101\\Web Personal Projects\\NewsApp\\GoodNewsApp\\GoodNewsApp.API\\GoodNewsApp.API\\GoodNewsApp.API.csproj",
+        "projectName": "GoodNewsApp.API",
+        "projectPath": "D:\\Importants\\Programming 101\\Web Personal Projects\\NewsApp\\GoodNewsApp\\GoodNewsApp.API\\GoodNewsApp.API\\GoodNewsApp.API.csproj",
+        "packagesPath": "C:\\Users\\eunic\\.nuget\\packages\\",
+        "outputPath": "D:\\Importants\\Programming 101\\Web Personal Projects\\NewsApp\\GoodNewsApp\\GoodNewsApp.API\\GoodNewsApp.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\eunic\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Importants\\Programming 101\\Web Personal Projects\\NewsApp\\GoodNewsApp\\GoodNewsApp.API\\GoodNewsApp.Persistence\\GoodNewsApp.Persistence.csproj": {
+                "projectPath": "D:\\Importants\\Programming 101\\Web Personal Projects\\NewsApp\\GoodNewsApp\\GoodNewsApp.API\\GoodNewsApp.Persistence\\GoodNewsApp.Persistence.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.8, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Importants\\Programming 101\\Web Personal Projects\\NewsApp\\GoodNewsApp\\GoodNewsApp.API\\GoodNewsApp.Domain\\GoodNewsApp.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Importants\\Programming 101\\Web Personal Projects\\NewsApp\\GoodNewsApp\\GoodNewsApp.API\\GoodNewsApp.Domain\\GoodNewsApp.Domain.csproj",
+        "projectName": "GoodNewsApp.Domain",
+        "projectPath": "D:\\Importants\\Programming 101\\Web Personal Projects\\NewsApp\\GoodNewsApp\\GoodNewsApp.API\\GoodNewsApp.Domain\\GoodNewsApp.Domain.csproj",
+        "packagesPath": "C:\\Users\\eunic\\.nuget\\packages\\",
+        "outputPath": "D:\\Importants\\Programming 101\\Web Personal Projects\\NewsApp\\GoodNewsApp\\GoodNewsApp.API\\GoodNewsApp.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\eunic\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Importants\\Programming 101\\Web Personal Projects\\NewsApp\\GoodNewsApp\\GoodNewsApp.API\\GoodNewsApp.Persistence\\GoodNewsApp.Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Importants\\Programming 101\\Web Personal Projects\\NewsApp\\GoodNewsApp\\GoodNewsApp.API\\GoodNewsApp.Persistence\\GoodNewsApp.Persistence.csproj",
+        "projectName": "GoodNewsApp.Persistence",
+        "projectPath": "D:\\Importants\\Programming 101\\Web Personal Projects\\NewsApp\\GoodNewsApp\\GoodNewsApp.API\\GoodNewsApp.Persistence\\GoodNewsApp.Persistence.csproj",
+        "packagesPath": "C:\\Users\\eunic\\.nuget\\packages\\",
+        "outputPath": "D:\\Importants\\Programming 101\\Web Personal Projects\\NewsApp\\GoodNewsApp\\GoodNewsApp.API\\GoodNewsApp.Persistence\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\eunic\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Importants\\Programming 101\\Web Personal Projects\\NewsApp\\GoodNewsApp\\GoodNewsApp.API\\GoodNewsApp.Domain\\GoodNewsApp.Domain.csproj": {
+                "projectPath": "D:\\Importants\\Programming 101\\Web Personal Projects\\NewsApp\\GoodNewsApp\\GoodNewsApp.API\\GoodNewsApp.Domain\\GoodNewsApp.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[7.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\Importants\\Programming 101\\Web Personal Projects\\NewsApp\\GoodNewsApp\\GoodNewsApp.API\\NewsApi\\NewsApi.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -27,7 +232,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\Importants\\Programming 101\\Web Personal Projects\\NewsApp\\GoodNewsApp\\GoodNewsApp.API\\GoodNewsApp.API\\GoodNewsApp.API.csproj": {
+                "projectPath": "D:\\Importants\\Programming 101\\Web Personal Projects\\NewsApp\\GoodNewsApp\\GoodNewsApp.API\\GoodNewsApp.API\\GoodNewsApp.API.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

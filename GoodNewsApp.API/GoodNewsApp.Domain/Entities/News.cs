@@ -8,12 +8,15 @@ namespace GoodNewsApp.Domain.Entities
 {
   public class News : EntityBase
   {
-    public string Author { get; set; }
+    public string Category { get; set; }
+    public string Author { get; set; } // required
     public string Content { get; set; }
-    public string Description { get; set; }
+    public string Description { get; set; } // required
     public string PublishedAt { get; set; }
-    public string Title { get; set; }
-    public string Url { get; set; }
-    public string UrlToImage { get; set; }
+    public string Title { get; set; } // required
+    public string Url { get; set; } // required
+    public string UrlToImage { get; set; } // required
+    public string SourceId { get; set; }
+    public string SourceName { get; set; }
   }
 }

@@ -40,3 +40,14 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+GoodNewsApp.API/.vs/
+GoodNewsApp.API/ConnexunNewsAPI/bin/
+GoodNewsApp.API/ConnexunNewsAPI/obj/
+GoodNewsApp.API/GoodNewsApp.API/bin/
+GoodNewsApp.API/GoodNewsApp.API/obj/
+GoodNewsApp.API/GoodNewsApp.Domain/bin/
+GoodNewsApp.API/GoodNewsApp.Domain/obj/
+GoodNewsApp.API/GoodNewsApp.Persistence/bin/
+GoodNewsApp.API/GoodNewsApp.Persistence/obj/
+GoodNewsApp.API/NewsApi/bin/
+GoodNewsApp.API/NewsApi/obj/
