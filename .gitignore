@@ -51,3 +51,7 @@ GoodNewsApp.API/GoodNewsApp.Persistence/bin/
 GoodNewsApp.API/GoodNewsApp.Persistence/obj/
 GoodNewsApp.API/NewsApi/bin/
 GoodNewsApp.API/NewsApi/obj/
+
+*.cache
+*.dll
+*.pdb
