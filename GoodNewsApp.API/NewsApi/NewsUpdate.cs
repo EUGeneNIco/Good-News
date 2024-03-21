@@ -13,7 +13,6 @@ namespace NewsApi
 {
   public class NewsUpdate
   {
-
     private readonly string API_KEY = "9027b4a82865458685a9738be2a7ac5d";
     private readonly List<string> CategoryList = NewsCategoryEnums.GetAllCategories();
     private readonly AppDbContext dbContext;
@@ -70,20 +69,6 @@ namespace NewsApi
       }
     }
 
-    private string GetCategoryName(string cat)
-    {
-      return string.IsNullOrEmpty(cat) ? "headlines" : cat;
-    }
-
-    private bool IsArticleDetailsComplete(ArticleResponse article)
-    {
-      return !string.IsNullOrEmpty(article.Description) &&
-        !string.IsNullOrEmpty(article.Author) &&
-        !string.IsNullOrEmpty(article.Title) &&
-        !string.IsNullOrEmpty(article.Url) &&
-        !string.IsNullOrEmpty(article.UrlToImage);
-    }
-
     private async Task SaveNewsToDb(List<ArticleResponse> articles, string category)
     {
       if (articles is null || !articles.Any())
@@ -117,10 +102,23 @@ namespace NewsApi
       Console.WriteLine(string.Format("Successfully saved {0} articles on {1} category", articles.Count, GetCategoryName(category)));
     }
 
+    private string GetCategoryName(string cat)
+    {
+      return string.IsNullOrEmpty(cat) ? "headlines" : cat;
+    }
+
+    private bool IsArticleDetailsComplete(ArticleResponse article)
+    {
+      return !string.IsNullOrEmpty(article.Description) &&
+        !string.IsNullOrEmpty(article.Author) &&
+        !string.IsNullOrEmpty(article.Title) &&
+        !string.IsNullOrEmpty(article.Url) &&
+        !string.IsNullOrEmpty(article.UrlToImage);
+    }
+
     private List<ArticleResponse> FilterArticles(List<ArticleResponse> articles)
     {
-
-      // Filter out some incomplete news article 
+      // Filter out articles with inc details
       articles = articles
         .Where(a => IsArticleDetailsComplete(a))
         .ToList();

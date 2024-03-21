@@ -40,27 +40,9 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
-GoodNewsApp.API/.vs/
-GoodNewsApp.API/ConnexunNewsAPI/bin/
-GoodNewsApp.API/ConnexunNewsAPI/obj/
-GoodNewsApp.API/GoodNewsApp.API/bin/
-GoodNewsApp.API/GoodNewsApp.API/obj/
-GoodNewsApp.API/GoodNewsApp.Domain/bin/
-GoodNewsApp.API/GoodNewsApp.Domain/obj/
-GoodNewsApp.API/GoodNewsApp.Persistence/bin/
-GoodNewsApp.API/GoodNewsApp.Persistence/obj/
-GoodNewsApp.API/NewsApi/bin/
-GoodNewsApp.API/NewsApi/obj/
 
 *.cache
 *.dll
-GoodNewsApp.API/.vs/ProjectEvaluation/goodnewsapp.api.metadata.v2
-GoodNewsApp.API/.vs/ProjectEvaluation/goodnewsapp.api.projects.v2
-GoodNewsApp.API/.vs/GoodNewsApp.API/v17/.suo
-GoodNewsApp.API/.vs/GoodNewsApp.API/DesignTimeBuild/.dtbcache.v2
-GoodNewsApp.API/NewsApi/bin/Debug/net6.0/NewsApi.dll
-GoodNewsApp.API/NewsApi/bin/Debug/net6.0/NewsApi.pdb
-GoodNewsApp.API/NewsApi/obj/Debug/net6.0/NewsApi.dll
-GoodNewsApp.API/NewsApi/obj/Debug/net6.0/NewsApi.pdb
-GoodNewsApp.API/NewsApi/obj/Debug/net6.0/ref/NewsApi.dll
-GoodNewsApp.API/NewsApi/obj/Debug/net6.0/refint/NewsApi.dll
+bin/
+.vs/
+obj/

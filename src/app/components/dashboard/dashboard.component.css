@@ -1,13 +1,14 @@
-p{
-    font-size: small;
+p {
+  font-size: small;
 }
-
 
 .headline-card {
   max-width: 100%;
   min-height: 25rem;
   border: 0;
-  background-color: whitesmoke;
+  /* background-color: whitesmoke; */
+  border-top: 2px solid rgb(81, 79, 79);
+  border-bottom: 2px solid rgb(81, 79, 79);
 
   position: relative;
   z-index: 2;
@@ -32,6 +33,10 @@ p{
   position: relative;
   z-index: 2;
   overflow: hidden;
+}
+
+.card .small{
+  font-size: 12px
 }
 
 .card::after {

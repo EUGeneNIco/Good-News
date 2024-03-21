@@ -16,9 +16,14 @@ namespace GoodNewsApp.API
     }
     public void ConfigureServices(IServiceCollection services)
     {
+      services.AddControllers();
+      services.AddEndpointsApiExplorer();
+      services.AddSwaggerGen();
+
       // DB
       services.AddDbContext<AppDbContext>(options =>
           options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

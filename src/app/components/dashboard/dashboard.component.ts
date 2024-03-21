@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
+import { News } from 'src/app/models/news';
 import { CategoryService } from 'src/app/services/category.service';
 import { NewsService } from 'src/app/services/news.service';
 
@@ -59,10 +60,9 @@ export class DashboardComponent implements OnInit {
     this.initSearchVariables();
 
     this.newsService.getNewsByCategory(category).subscribe({
-      next: (news: any) => {
-        console.log(news);
-        let newsItems = this.prepareData(news.articles);
-        console.log(newsItems);
+      next: (news: News) => {
+        // console.log(news);
+        let newsItems = this.prepareData(news);
         this.newsHeadline = newsItems[0];
         this.newsData = newsItems.splice(1);
 
@@ -97,7 +97,7 @@ export class DashboardComponent implements OnInit {
       return {
         title: newsData.title.split(' - ')[0],
         content: newsData.content ? newsData.content.split(' [+')[0] : '',
-        source: newsData.source,
+        sourceName: newsData.sourceName,
         author: newsData.author,
         description: newsData.description,
         publishedAt: newsData.publishedAt,

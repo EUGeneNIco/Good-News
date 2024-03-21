@@ -6,13 +6,16 @@ import { NEWS_API_KEY } from '../globals/newsapp';
   providedIn: 'root'
 })
 export class BaseService {
+  NEWS_API_URL: string;
+  NEWS_API_KEY: string;
+
   API_URL: string;
-  API_KEY: string;
 
   constructor(
     public http: HttpClient
   ) {
-    this.API_URL = 'https://newsapi.org/v2/';
-    this.API_KEY = NEWS_API_KEY;
+    this.NEWS_API_URL = 'https://newsapi.org/v2/';
+    this.NEWS_API_KEY = NEWS_API_KEY;
+    this.API_URL = 'https://localhost:7134/api/';
   }
 }
