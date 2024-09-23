@@ -237,3 +237,5 @@ pids
 *.pid.lock
 
 .vs/
+
+GoodNewsApp.API/GoodNewsApp.Domain/obj
