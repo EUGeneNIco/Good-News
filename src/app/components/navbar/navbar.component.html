@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg fixed-top navbar-light py-3" aria-label="Main navigation">
   <div class="container-fluid">
-    <a class="navbar-brand" href="">Good News</a>
+    <a class="navbar-brand" href="#">Good News</a>
     <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" data-bs-toggle="collapse"
       data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -17,27 +17,19 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 with-cursor">
         <li class="nav-item" *ngFor="let category of categories">
-          <a class="nav-link" aria-current="page" 
+          <a class="nav-link" aria-current="page"
             [ngClass]="this.selectedCategory === category.value ? 'selected' : 'not-selected'"
             (click)="onSelectCategory(category.value)">{{
-              category.name
+            category.name
             }}</a>
         </li>
-        <!-- <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Settings</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li> -->
       </ul>
       <form [formGroup]="formModel" class="d-flex" role="search" autocomplete="off">
         <div class="input-group">
-          <input type="text" style="border: 0;" formControlName="searchItem" class="form-control" placeholder="Input a keyword here"
-            aria-label="Search" aria-describedby="Search">
-          <span (click)="search()" style="cursor: pointer; background-color: black; color: white;" class="input-group-text"><i class='bx bx-search-alt-2'
-              id="Search"></i></span>
+          <input type="text" style="border: 0;" formControlName="searchItem" class="form-control"
+            placeholder="Input a keyword here" aria-label="Search" aria-describedby="Search">
+          <span (click)="search()" style="cursor: pointer; background-color: black; color: white;"
+            class="input-group-text"><i class='bx bx-search-alt-2' id="Search"></i></span>
         </div>
       </form>
     </div>
