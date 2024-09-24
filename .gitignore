@@ -43,9 +43,10 @@ Thumbs.db
 
 *.cache
 *.dll
-bin/
-.vs/
-obj/
+*bin/
+*obj
+*.vs/
+*.obj
 
 # Build results
 [Dd]ebug/
@@ -235,7 +236,3 @@ pids
 *.pid
 *.seed
 *.pid.lock
-
-.vs/
-
-GoodNewsApp.API/GoodNewsApp.Domain/obj
