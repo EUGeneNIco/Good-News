@@ -7,6 +7,14 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-0 mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a *ngIf="dateStatement" class="nav-link date" aria-current="page">{{ dateStatement }}</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 with-cursor">
         <li class="nav-item" *ngFor="let category of categories">
           <a class="nav-link" aria-current="page" 

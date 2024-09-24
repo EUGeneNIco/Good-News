@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { CategoryService } from 'src/app/services/category.service';
 import { NewsService } from 'src/app/services/news.service';
+import { SystemService } from 'src/app/services/system.service';
 
 @Component({
   selector: 'app-navbar',
@@ -11,6 +12,7 @@ import { NewsService } from 'src/app/services/news.service';
 export class NavbarComponent implements OnInit {
   news:any[] = [];
   formModel: FormGroup;
+  dateStatement: string;
 
   selectedCategory: string = '';
 
@@ -34,12 +36,21 @@ export class NavbarComponent implements OnInit {
 
   constructor(
     private categoryService: CategoryService,
+    private systemService: SystemService,
     private fb: FormBuilder,
   ){
 
   }
 
   ngOnInit(): void {
+    this.systemService.getDateStatement().subscribe({
+      next: (date: any) => {
+        this.dateStatement = date.dateStatement;
+      },
+      error: (err) => {
+        console.log("Error: ", err);
+      }
+    })
     if(!this.formModel){
       this.formModel = this.fb.group({
         searchItem: ['']

@@ -51,7 +51,6 @@ namespace GoodNewsApp.API.Controllers
       }
       catch (Exception ex)
       {
-        //return BadRequest(ex.Message);
         return StatusCode(StatusCodes.Status500InternalServerError, ex);
       }
     }

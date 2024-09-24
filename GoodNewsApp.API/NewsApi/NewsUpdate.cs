@@ -65,7 +65,7 @@ namespace NewsApi
       }
       catch (Exception ex)
       {
-        throw ex;
+        Console.WriteLine($"Error: {ex.Message}");
       }
     }
 

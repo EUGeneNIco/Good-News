@@ -7,9 +7,8 @@ p {
   min-height: 25rem;
   border: 0;
   /* background-color: whitesmoke; */
-  border-top: 2px solid rgb(81, 79, 79);
-  border-bottom: 2px solid rgb(81, 79, 79);
-
+  border-top: 2px solid rgb(146, 142, 142);
+  border-bottom: 2px solid rgb(146, 142, 142);
   position: relative;
   z-index: 2;
   overflow: hidden;
